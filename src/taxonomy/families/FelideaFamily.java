@@ -1,8 +1,9 @@
 package taxonomy.families;
 
+import taxonomy.behaviours.HunterBehaviour;
 import taxonomy.classes.MammaliaClass;
 
-public abstract class FelideaFamily extends MammaliaClass
+public abstract class FelideaFamily extends MammaliaClass implements HunterBehaviour
 {
     public void purr()
     {
