@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public abstract class AnimaliaKingdom
 {
-    protected int           age = 0;
-    protected ArrayList     descendents = new ArrayList();
-    protected boolean       isAdult = false;
+    private int             age = 0;
+    private ArrayList       descendents = new ArrayList();
+    private boolean         isAdult = false;
 
     /* Abstract methods */
 
-    public abstract void    addDescendent();
+    public abstract void    eat();
     public abstract void    move();
     public abstract void    reproduce();
 
