@@ -11,6 +11,6 @@ public abstract class BovidaeFamily extends MammaliaClass implements IVictimBeha
     }
     public void suffering()
     {
-        System.out.println("I'm a poor victim of the crulty of lions...");
+        System.out.println("I'm a poor victim of the cruelty of lions...");
     }
 }

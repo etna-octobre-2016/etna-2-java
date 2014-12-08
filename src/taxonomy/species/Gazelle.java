@@ -25,25 +25,25 @@ public class Gazelle extends BovidaeFamily
 	@Override
 	public void Avoid() 
 	{
-		System.out.println("Je m'enfui mais avec grâce et élégance");		
+		System.out.println("I run away with grace and elegance");		
 	}
 
 	@Override
 	public void eat() 
 	{	
-		System.out.println("j'aime l'herbe fraiche");
+		System.out.println("I like the fresh grass");
 	}
 
 	@Override
 	public void move() 
 	{
-		System.out.println("Déplacement avec grâce et élégance");
+		System.out.println("Travel with grace and elegance");
 	}
 
 	@Override
 	public void reproduce() 
 	{
-		System.out.println("Un nouveau steak de Lion");
+		System.out.println("A new steak of Lion");
 	}
 	
 	/* Getters */
