@@ -1,17 +1,22 @@
 package taxonomy.species;
 
 import taxonomy.families.FelideaFamily;
+import taxonomy.life.LifeException;
+import taxonomy.model.state.ELifeState;
+import taxonomy.model.state.IStateChangeable;
 
-public final class Lion extends FelideaFamily
+public final class Lion extends FelideaFamily implements IStateChangeable
 {
     private String name;
     private static String scientificName = "Panthera Leo";
+    private ELifeState state;
 
     /* Constructors */
 
     public Lion(String name)
     {
         this.name = name;
+        state = ELifeState.LIFENAISSANCE;
     }
     public Lion()
     {
@@ -46,6 +51,13 @@ public final class Lion extends FelideaFamily
         System.out.println("You can't run away from me!");
     }
 
+    
+    /*Implementation de l'interface*/
+    public void life() throws LifeException
+    {
+    	//ici il va falloir gérer la vie de l'animal
+    }
+    
     /* Getters */
 
     public String getScientificName() {
@@ -60,4 +72,14 @@ public final class Lion extends FelideaFamily
     public void setName(String name) {
         this.name = name;
     }
+	@Override
+	public ELifeState getState() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setState(ELifeState lifeState) {
+		// TODO Auto-generated method stub
+		
+	}
 }
