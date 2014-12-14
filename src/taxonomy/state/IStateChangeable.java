@@ -8,5 +8,5 @@ public interface IStateChangeable
 
     public void setState(ELifeState state);
 
-    public void validateStateChange(ELifeState currentState, ELifeState nextStep) throws LifeException;
+    public void validateStateChange(ELifeState nextState) throws LifeException;
 }

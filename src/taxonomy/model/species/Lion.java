@@ -2,7 +2,9 @@ package taxonomy.model.species;
 
 import taxonomy.behaviours.ILivingBehaviour;
 import taxonomy.model.families.FelideaFamily;
+import taxonomy.model.life.LifeException;
 import taxonomy.state.ELifeState;
+import taxonomy.state.LifeStateMachine;
 
 public final class Lion extends FelideaFamily implements ILivingBehaviour
 {
@@ -19,6 +21,7 @@ public final class Lion extends FelideaFamily implements ILivingBehaviour
     public Lion(String name)
     {
         this.name = name;
+        this.born();
     }
 
     public Lion()
@@ -70,17 +73,17 @@ public final class Lion extends FelideaFamily implements ILivingBehaviour
 
     public void born()
     {
-        // do stuff
+        LifeStateMachine.changeState(this);
     }
 
     public void growUp()
     {
-        // do stuff
+        LifeStateMachine.changeState(this, ELifeState.LIFEADULTE);
     }
 
     public void die()
     {
-        // do stuff
+        LifeStateMachine.changeState(this, ELifeState.LIFEMORT);
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -97,9 +100,16 @@ public final class Lion extends FelideaFamily implements ILivingBehaviour
         this.state = state;
     }
 
-    public void validateStateChange(ELifeState currentState, ELifeState nextState)
+    public void validateStateChange(ELifeState nextState)
     {
-        // do stuff
+        if (this.getState() == nextState)
+        {
+            throw new LifeException("This lion is already in the state: " + this.getState().getState());
+        }
+        if (this.getState() == ELifeState.LIFEADULTE && nextState == ELifeState.LIFENAISSANCE)
+        {
+            throw new LifeException("This lion cannot be a little lion again");
+        }
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
