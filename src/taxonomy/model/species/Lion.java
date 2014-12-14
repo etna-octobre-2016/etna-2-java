@@ -1,38 +1,32 @@
 package taxonomy.model.species;
 
 import taxonomy.model.families.FelideaFamily;
-import taxonomy.model.life.LifeException;
-import taxonomy.state.ELifeState;
-import taxonomy.state.IStateChangeable;
 
-public final class Lion extends FelideaFamily implements IStateChangeable
+public final class Lion extends FelideaFamily
 {
-    private String name;
+    private static String name;
     private static String scientificName = "Panthera Leo";
-    private ELifeState state;
 
-    /* Constructors */
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // Constructors
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
     public Lion(String name)
     {
         this.name = name;
-        state = ELifeState.LIFENAISSANCE;
     }
     public Lion()
     {
         this("Unknown");
     }
 
-
-    /* Class methods */
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // AnimaliaKingdom abstract methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
     public void eat()
     {
         System.out.println("I love gazelles");
-    }
-    public void hide()
-    {
-        System.out.println("You can't see me...");
     }
     public void move()
     {
@@ -41,6 +35,15 @@ public final class Lion extends FelideaFamily implements IStateChangeable
     public void reproduce()
     {
         System.out.println("If it's a male, we could call him Simba");
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // IHunterBehaviour interface methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void hide()
+    {
+        System.out.println("You can't see me...");
     }
     public void sneakUp()
     {
@@ -51,35 +54,25 @@ public final class Lion extends FelideaFamily implements IStateChangeable
         System.out.println("You can't run away from me!");
     }
 
-    
-    /*Implementation de l'interface*/
-    public void life() throws LifeException
-    {
-    	//ici il va falloir g�rer la vie de l'animal
-    }
-    
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // Getters & Setters
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
     /* Getters */
 
-    public String getScientificName() {
+    public String getScientificName()
+    {
         return this.scientificName;
     }
-    public String getName() {
+    public String getName()
+    {
         return this.name;
     }
 
     /* Setters */
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
-	@Override
-	public ELifeState getState() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public void setState(ELifeState lifeState) {
-		// TODO Auto-generated method stub
-		
-	}
 }
