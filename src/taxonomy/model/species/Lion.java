@@ -2,8 +2,8 @@ package taxonomy.model.species;
 
 import taxonomy.model.families.FelideaFamily;
 import taxonomy.model.life.LifeException;
-import taxonomy.model.state.ELifeState;
-import taxonomy.model.state.IStateChangeable;
+import taxonomy.state.ELifeState;
+import taxonomy.state.IStateChangeable;
 
 public final class Lion extends FelideaFamily implements IStateChangeable
 {

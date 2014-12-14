@@ -1,4 +1,4 @@
-package taxonomy.model.state;
+package taxonomy.state;
 
 import taxonomy.model.life.ILife;
 
