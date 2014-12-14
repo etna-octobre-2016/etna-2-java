@@ -2,63 +2,78 @@ package taxonomy.model.species;
 
 import taxonomy.model.families.BovidaeFamily;
 
-public class Gazelle extends BovidaeFamily
+public final class Gazelle extends BovidaeFamily
 {
-	private String name;
+    private String name;
     private static String scientificName = "Gazella";
-    
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // Constructors
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public Gazelle(String name)
+    {
+        this.name = name;
+    }
+
     public Gazelle()
     {
-    	this("Unknown");
+        this("Unknown");
     }
 
-	public Gazelle(String name) {
-		this.name = name;
-	}
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // AnimaliaKingdom abstract methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
-	@Override
-	public void hide() 
-	{
-		System.out.println("You can't see me...");	
-	}
+    public void eat()
+    {
+        System.out.println("I like the fresh grass");
+    }
 
-	@Override
-	public void avoid()
-	{
-		System.out.println("I run away with grace and elegance");		
-	}
+    public void move()
+    {
+        System.out.println("Travel with grace and elegance");
+    }
 
-	@Override
-	public void eat() 
-	{	
-		System.out.println("I like the fresh grass");
-	}
+    public void reproduce()
+    {
+        System.out.println("A new meal for lions T_T");
+    }
 
-	@Override
-	public void move() 
-	{
-		System.out.println("Travel with grace and elegance");
-	}
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // IVictimBehaviour interface methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
 
-	@Override
-	public void reproduce() 
-	{
-		System.out.println("A new steak of Lion");
-	}
-	
-	/* Getters */
+    public void hide()
+    {
+        System.out.println("You can't see me...");
+    }
 
-    public String getScientificName() {
+    public void avoid()
+    {
+        System.out.println("I run away with grace and elegance");
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // Getters & Setters
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    /* Getters */
+
+    public String getScientificName()
+    {
         return this.scientificName;
     }
-    public String getName() {
+
+    public String getName()
+    {
         return this.name;
     }
 
     /* Setters */
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
-
 }
