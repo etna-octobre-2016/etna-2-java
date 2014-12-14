@@ -8,9 +8,18 @@ public class ModelTest
     {
         System.out.println("hello world");
 
-        Lion simba = new Lion("Simba");
-        System.out.println(simba.getName());
-        System.out.println(simba.getScientificName());
-        simba.reproduce();
+        Lion moufassa = new Lion("Moufassa");
+
+        System.out.println(moufassa.getName());
+
+        System.out.println(moufassa.getScientificName());
+
+        moufassa.reproduce();
+
+        System.out.println(moufassa.getState().getStateDescription());
+
+        moufassa.growUp();
+
+        System.out.println(moufassa.getState().getStateDescription());
     }
 }
