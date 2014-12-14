@@ -1,0 +1,15 @@
+package taxonomy.model.classes;
+
+import taxonomy.model.kingdoms.AnimaliaKingdom;
+
+public abstract class MammaliaClass extends AnimaliaKingdom
+{
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // Class methods
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void suckle()
+    {
+        System.out.println("Yummy! Thanks mom");
+    }
+}
