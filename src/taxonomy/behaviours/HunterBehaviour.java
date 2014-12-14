@@ -1,4 +1,4 @@
-package taxonomy.model.behaviours;
+package taxonomy.behaviours;
 
 public interface HunterBehaviour
 {

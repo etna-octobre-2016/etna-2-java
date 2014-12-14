@@ -1,6 +1,6 @@
 package taxonomy.model.families;
 
-import taxonomy.model.behaviours.HunterBehaviour;
+import taxonomy.behaviours.HunterBehaviour;
 import taxonomy.model.classes.MammaliaClass;
 
 public abstract class FelideaFamily extends MammaliaClass implements HunterBehaviour
