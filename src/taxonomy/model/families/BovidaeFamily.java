@@ -1,7 +1,7 @@
-package taxonomy.families;
+package taxonomy.model.families;
 
-import taxonomy.behaviours.IVictimBehaviour;
-import taxonomy.classes.MammaliaClass;
+import taxonomy.model.behaviours.IVictimBehaviour;
+import taxonomy.model.classes.MammaliaClass;
 
 public abstract class BovidaeFamily extends MammaliaClass implements IVictimBehaviour
 {

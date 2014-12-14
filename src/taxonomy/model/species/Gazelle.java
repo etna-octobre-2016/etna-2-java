@@ -1,6 +1,6 @@
-package taxonomy.species;
+package taxonomy.model.species;
 
-import taxonomy.families.BovidaeFamily;
+import taxonomy.model.families.BovidaeFamily;
 
 public class Gazelle extends BovidaeFamily
 {

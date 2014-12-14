@@ -1,6 +1,6 @@
-package taxonomy.classes;
+package taxonomy.model.classes;
 
-import taxonomy.kingdoms.AnimaliaKingdom;
+import taxonomy.model.kingdoms.AnimaliaKingdom;
 
 public abstract class MammaliaClass extends AnimaliaKingdom
 {

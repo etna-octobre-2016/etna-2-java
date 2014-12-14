@@ -1,4 +1,4 @@
-package taxonomy.life;
+package taxonomy.model.life;
 
 public interface ILife 
 {

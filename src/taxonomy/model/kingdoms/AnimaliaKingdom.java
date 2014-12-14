@@ -1,4 +1,4 @@
-package taxonomy.kingdoms;
+package taxonomy.model.kingdoms;
 
 import java.util.ArrayList;
 

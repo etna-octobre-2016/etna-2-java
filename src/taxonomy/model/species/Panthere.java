@@ -1,6 +1,6 @@
-package taxonomy.species;
+package taxonomy.model.species;
 
-import taxonomy.families.FelideaFamily;
+import taxonomy.model.families.FelideaFamily;
 
 public class Panthere extends FelideaFamily
 {

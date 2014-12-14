@@ -1,6 +1,6 @@
 package taxonomy.model.state;
 
-import taxonomy.life.LifeException;
+import taxonomy.model.life.LifeException;
 
 public class LifeStateMachine 
 {

@@ -1,7 +1,7 @@
-package taxonomy.species;
+package taxonomy.model.species;
 
-import taxonomy.families.FelideaFamily;
-import taxonomy.life.LifeException;
+import taxonomy.model.families.FelideaFamily;
+import taxonomy.model.life.LifeException;
 import taxonomy.model.state.ELifeState;
 import taxonomy.model.state.IStateChangeable;
 
@@ -55,7 +55,7 @@ public final class Lion extends FelideaFamily implements IStateChangeable
     /*Implementation de l'interface*/
     public void life() throws LifeException
     {
-    	//ici il va falloir gérer la vie de l'animal
+    	//ici il va falloir gï¿½rer la vie de l'animal
     }
     
     /* Getters */

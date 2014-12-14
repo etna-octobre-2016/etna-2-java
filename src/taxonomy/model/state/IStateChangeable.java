@@ -1,6 +1,6 @@
 package taxonomy.model.state;
 
-import taxonomy.life.ILife;
+import taxonomy.model.life.ILife;
 
 public interface IStateChangeable extends ILife
 {
