@@ -23,7 +23,7 @@ public class Gazelle extends BovidaeFamily
 	}
 
 	@Override
-	public void Avoid() 
+	public void avoid()
 	{
 		System.out.println("I run away with grace and elegance");		
 	}
