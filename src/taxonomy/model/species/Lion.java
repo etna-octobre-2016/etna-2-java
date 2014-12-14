@@ -104,7 +104,7 @@ public final class Lion extends FelideaFamily implements ILivingBehaviour
     {
         if (this.getState() == nextState)
         {
-            throw new LifeException("This lion is already in the state: " + this.getState().getState());
+            throw new LifeException("This lion is already in the state: " + this.getState().getStateDescription());
         }
         if (this.getState() == ELifeState.LIFEADULTE && nextState == ELifeState.LIFENAISSANCE)
         {
