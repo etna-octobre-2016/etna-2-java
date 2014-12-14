@@ -1,12 +1,7 @@
 package taxonomy.model.kingdoms;
 
-import taxonomy.state.ELifeState;
-import taxonomy.state.IStateChangeable;
-
-public abstract class AnimaliaKingdom implements IStateChangeable
+public abstract class AnimaliaKingdom
 {
-    protected ELifeState state;
-
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // Abstract methods
     ///////////////////////////////////////////////////////////////////////////////////////////////
