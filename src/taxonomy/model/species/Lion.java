@@ -4,8 +4,8 @@ import taxonomy.model.families.FelideaFamily;
 
 public final class Lion extends FelideaFamily
 {
-    private static String name;
-    private static String scientificName = "Panthera Leo";
+    private String          name;
+    private static String   scientificName = "Panthera Leo";
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // Constructors
