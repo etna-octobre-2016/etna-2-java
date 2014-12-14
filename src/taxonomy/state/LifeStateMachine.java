@@ -6,8 +6,11 @@ public class LifeStateMachine
 {
     public static void changeState(IStateChangeable stateReference) throws LifeException
     {
-        stateReference.life();
+        ELifeState currentState, nextState;
 
-        stateReference.setState(stateReference.getState().getNextStepState());
+        currentState = stateReference.getState();
+        nextState = currentState.getNextStepState();
+        stateReference.validateStateChange(currentState, nextState);
+        stateReference.setState(nextState);
     }
 }

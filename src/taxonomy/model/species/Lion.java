@@ -1,11 +1,16 @@
 package taxonomy.model.species;
 
+import taxonomy.behaviours.ILivingBehaviour;
 import taxonomy.model.families.FelideaFamily;
+import taxonomy.state.ELifeState;
 
-public final class Lion extends FelideaFamily
+public final class Lion extends FelideaFamily implements ILivingBehaviour
 {
-    private String name;
     private static String scientificName = "Panthera Leo";
+
+    private String name;
+
+    private ELifeState state;
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // Constructors
@@ -57,6 +62,44 @@ public final class Lion extends FelideaFamily
     public void trackDown()
     {
         System.out.println("You can't run away from me!");
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // ILivingBehaviour interface methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void born()
+    {
+        // do stuff
+    }
+
+    public void growUp()
+    {
+        // do stuff
+    }
+
+    public void die()
+    {
+        // do stuff
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // IStateChangeable interface methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public ELifeState getState()
+    {
+        return this.state;
+    }
+
+    public void setState(ELifeState state)
+    {
+        this.state = state;
+    }
+
+    public void validateStateChange(ELifeState currentState, ELifeState nextState)
+    {
+        // do stuff
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////

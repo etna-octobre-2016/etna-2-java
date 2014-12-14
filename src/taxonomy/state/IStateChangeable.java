@@ -1,10 +1,12 @@
 package taxonomy.state;
 
-import taxonomy.model.life.ILife;
+import taxonomy.model.life.LifeException;
 
-public interface IStateChangeable extends ILife
+public interface IStateChangeable
 {
     public ELifeState getState();
 
-    public void setState(ELifeState lifeState);
+    public void setState(ELifeState state);
+
+    public void validateStateChange(ELifeState currentState, ELifeState nextStep) throws LifeException;
 }
