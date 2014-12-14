@@ -1,6 +1,6 @@
 package taxonomy.model.life;
 
-public interface ILife 
+public interface ILife
 {
-	public void life() throws LifeException;
+    public void life() throws LifeException;
 }

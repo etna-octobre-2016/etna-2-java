@@ -13,6 +13,7 @@ public abstract class FelideaFamily extends MammaliaClass implements IHunterBeha
     {
         System.out.println("Grrrrrrrrrrrr :)");
     }
+
     public void scratch()
     {
         System.out.println("Let me leave my signature on your skin...");

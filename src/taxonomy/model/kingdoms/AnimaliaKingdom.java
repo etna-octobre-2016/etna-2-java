@@ -5,13 +5,15 @@ import taxonomy.state.IStateChangeable;
 
 public abstract class AnimaliaKingdom implements IStateChangeable
 {
-    protected ELifeState    state;
+    protected ELifeState state;
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // Abstract methods
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    public abstract void    eat();
-    public abstract void    move();
-    public abstract void    reproduce();
+    public abstract void eat();
+
+    public abstract void move();
+
+    public abstract void reproduce();
 }

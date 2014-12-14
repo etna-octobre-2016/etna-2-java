@@ -9,7 +9,7 @@ public abstract class BovidaeFamily extends MammaliaClass implements IVictimBeha
     // Class methods
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-	public void charge()
+    public void charge()
     {
         System.out.println("Eat my horns !");
     }
