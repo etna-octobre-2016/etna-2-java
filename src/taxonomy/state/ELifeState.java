@@ -6,23 +6,23 @@ public enum ELifeState
     LIFEADULTE("je suis adulte", LIFEMORT),
     LIFENAISSANCE("je suis né", LIFEADULTE);
 
-    private ELifeState nextStepState;
+    private ELifeState nextState;
 
-    private String state;
+    private String stateDescription;
 
-    private ELifeState(String state, ELifeState nextStepState)
+    private ELifeState(String stateDescription, ELifeState nextStepState)
     {
-        this.state = state;
-        this.nextStepState = nextStepState;
+        this.stateDescription = stateDescription;
+        this.nextState = nextStepState;
     }
 
-    public String getState()
+    public String getStateDescription()
     {
-        return state;
+        return stateDescription;
     }
 
-    public ELifeState getNextStepState()
+    public ELifeState getNextState()
     {
-        return nextStepState;
+        return nextState;
     }
 }

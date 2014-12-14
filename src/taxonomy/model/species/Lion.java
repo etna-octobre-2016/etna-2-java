@@ -1,11 +1,18 @@
 package taxonomy.model.species;
 
+import taxonomy.behaviours.ILivingBehaviour;
 import taxonomy.model.families.FelideaFamily;
+import taxonomy.model.life.LifeException;
+import taxonomy.state.ELifeState;
+import taxonomy.state.LifeStateMachine;
 
-public final class Lion extends FelideaFamily
+public final class Lion extends FelideaFamily implements ILivingBehaviour
 {
-    private String name;
     private static String scientificName = "Panthera Leo";
+
+    private String name;
+
+    private ELifeState state;
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // Constructors
@@ -14,6 +21,7 @@ public final class Lion extends FelideaFamily
     public Lion(String name)
     {
         this.name = name;
+        this.born();
     }
 
     public Lion()
@@ -57,6 +65,51 @@ public final class Lion extends FelideaFamily
     public void trackDown()
     {
         System.out.println("You can't run away from me!");
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // ILivingBehaviour interface methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public void born()
+    {
+        LifeStateMachine.changeState(this);
+    }
+
+    public void growUp()
+    {
+        LifeStateMachine.changeState(this, ELifeState.LIFEADULTE);
+    }
+
+    public void die()
+    {
+        LifeStateMachine.changeState(this, ELifeState.LIFEMORT);
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // IStateChangeable interface methods definitions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    public ELifeState getState()
+    {
+        return this.state;
+    }
+
+    public void setState(ELifeState state)
+    {
+        this.state = state;
+    }
+
+    public void validateStateChange(ELifeState nextState)
+    {
+        if (this.getState() == nextState)
+        {
+            throw new LifeException("This lion is already in the state: " + this.getState().getStateDescription());
+        }
+        if (this.getState() == ELifeState.LIFEADULTE && nextState == ELifeState.LIFENAISSANCE)
+        {
+            throw new LifeException("This lion cannot be a little lion again");
+        }
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////

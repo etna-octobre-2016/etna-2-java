@@ -4,10 +4,14 @@ import taxonomy.model.life.LifeException;
 
 public class LifeStateMachine
 {
-    public static void changeState(IStateChangeable stateReference) throws LifeException
+    public static void changeState(IStateChangeable livingBeing, ELifeState nextState) throws LifeException
     {
-        stateReference.life();
+        livingBeing.validateStateChange(nextState);
+        livingBeing.setState(nextState);
+    }
 
-        stateReference.setState(stateReference.getState().getNextStepState());
+    public static void changeState(IStateChangeable livingBeing)
+    {
+        changeState(livingBeing, ELifeState.LIFENAISSANCE);
     }
 }
