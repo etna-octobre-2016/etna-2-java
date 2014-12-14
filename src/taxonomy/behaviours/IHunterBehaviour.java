@@ -1,6 +1,6 @@
 package taxonomy.behaviours;
 
-public interface HunterBehaviour
+public interface IHunterBehaviour
 {
     public void hide();
     public void sneakUp();
