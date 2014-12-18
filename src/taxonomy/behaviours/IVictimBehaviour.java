@@ -1,7 +1,8 @@
 package taxonomy.behaviours;
 
-public interface IVictimBehaviour 
+public interface IVictimBehaviour
 {
-	public void hide();
-	public void Avoid();
+    public void hide();
+
+    public void avoid();
 }
