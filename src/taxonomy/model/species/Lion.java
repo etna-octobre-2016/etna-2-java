@@ -57,6 +57,12 @@ public final class Lion extends FelideaFamily implements ILivingBehaviour
         System.out.println("You can't see me...");
     }
 
+    public void kill(ILivingBehaviour animal)
+    {
+        System.out.println("Gotcha !");
+        animal.die();
+    }
+
     public void sneakUp()
     {
         System.out.println("Behind you!");

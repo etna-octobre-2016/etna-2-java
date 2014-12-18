@@ -34,11 +34,9 @@ public class ModelTest
         gaz.avoid();
         
         moufassa.sneakUp();
+        moufassa.kill(gaz);
         moufassa.eat();
-        
-        gaz.die();
+
         System.out.println(gaz.getState().getStateDescription());
-        
-        
     }
 }
