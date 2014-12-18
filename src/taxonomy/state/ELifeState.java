@@ -4,7 +4,7 @@ public enum ELifeState
 {
     LIFEMORT("je suis mort", null),
     LIFEADULTE("je suis adulte", LIFEMORT),
-    LIFENAISSANCE("je suis né", LIFEADULTE);
+    LIFENAISSANCE("Born to be alive.", LIFEADULTE);
 
     private ELifeState nextState;
 
